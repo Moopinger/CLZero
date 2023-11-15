@@ -1,5 +1,5 @@
 # CLZero
-A project for fuzzing HTTP/1.1 CL.0 Attack Vectors. 
+A project for fuzzing HTTP/1.1 CL.0 Request Smuggling Attack Vectors. 
 
 # About 
 Thank you to @albinowax and @defparam, else this tool would not exist. Inspired by the tool [Smuggler](https://github.com/defparam/smuggler) all attack methods adapted from there and https://portswigger.net/research/how-to-turn-security-research-into-profit

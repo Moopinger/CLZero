@@ -2,7 +2,7 @@
 A project for fuzzing HTTP/1.1 CL.0 Request Smuggling Attack Vectors. 
 
 # About 
-Thank you to @albinowax and @defparam, else this tool would not exist. Inspired by the tool [Smuggler](https://github.com/defparam/smuggler) all attack methods adapted from there and https://portswigger.net/research/how-to-turn-security-research-into-profit
+Thank you to @albinowax, @defparam and @d3d else this tool would not exist. Inspired by the tool [Smuggler](https://github.com/defparam/smuggler) all attack methods adapted from there and https://portswigger.net/research/how-to-turn-security-research-into-profit
 
 For more info see: https://moopinger.github.io/blog/fuzzing/clzero/tools/request/smuggling/2023/11/15/Fuzzing-With-CLZero.html
 

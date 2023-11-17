@@ -35,7 +35,6 @@ def randomword(length):
 
 def send_request(url, request_type = "regular", modified_cl = "none"):
 
-    #values from arg parser
     # Parse the URL
     parsed_url = urlparse(url)
     host = parsed_url.hostname
@@ -94,7 +93,7 @@ def send_request(url, request_type = "regular", modified_cl = "none"):
                             except:
                                 return "LASTBYTE_FAIL", "0"
                                             
-                        #conplete the first regular_request immediately after sending last byte for smuggle_request_full
+                        #complete the probe (regular_request) request
                         ssock.send(last_byte.encode())
                         response = ssock.recv(4096)
 

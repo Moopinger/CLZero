@@ -194,10 +194,10 @@ def write_value_to_file(value, filename):
         f.write(str(value) + '\n')
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='CLZero by Moopinger')
+    parser = argparse.ArgumentParser(description='CLZero by Moopinger - Thanks: Smuggler - @Defparam. @Albinowax. D3d - @deadvolvo')
     parser.add_argument('-url', type=str, help='(-u), Single target URL.')
     parser.add_argument('-file', type=str, help='(-f), Files containing multiple targets.')
-    parser.add_argument('-index', type=int, default=0, help="(-i), Index start point when using a file list. Default is first line.")
+    parser.add_argument('-index', type=int, default=0, help="(-i), Index start point when using a file list.")
     parser.add_argument('-verbose', action='store_true', help="(-v), Enable verbose output.")
     parser.add_argument('-no-color', action='store_true', help="Disable colors in HTTP Status")
     parser.add_argument('-resume', action='store_true', help="Resume scan from last index place.")

@@ -123,7 +123,7 @@ def send_request(url, request_type = "regular", modified_cl = "none"):
                 if "Connection reset by peer" in string_error:
                     return "PEER_RESET", "0"
                 else:
-                    return None, None
+                    return "ERROR", "0"
 
     # Standard request method begins
     else:
@@ -162,7 +162,7 @@ def send_request(url, request_type = "regular", modified_cl = "none"):
                 if "Connection reset by peer" in string_error:
                     return "PEER_RESET", "0"
                 else:
-                    return None, None
+                    return "ERROR", "0"
 
     #basic error checks below
     if response == "":
@@ -294,7 +294,7 @@ if __name__ == "__main__":
         #base request
         first_status, first_length = send_request(target, "regular")
 
-        if first_status and first_status != "TIMEOUT":
+        if first_status != "ERROR" and first_status != "TIMEOUT":
             
             if not QUIET:
                 print("[+] Target URL: " + target + " [" + str(count) + "/" + str(total_urls) + "]")
@@ -322,7 +322,7 @@ if __name__ == "__main__":
                         print("\t[Probe]: "+ color_code(reg_status) + " [" + reg_length + "]")
 
                 # 429 - "HTTP code: Too many requests", this will only cause FPs and heartbreak, so we ignore here
-                if reg_status != first_status and reg_status != "429" and reg_status != "LASTBYTE_FAIL":
+                if reg_status != first_status and reg_status != "429" and reg_status != "LASTBYTE_FAIL" and reg_status != "ERROR":
 
                     request_payload = send_request(target, "generate", modified_header)
                     payload_filename = target.replace("http://", "").replace("https://", "").replace("/", "")

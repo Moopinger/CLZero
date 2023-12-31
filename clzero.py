@@ -46,7 +46,7 @@ def send_request(url, request_type = "regular", modified_cl = "none"):
 
     #Parse the config file values for the smuggle request
     smuggle_content_len = str(len(smuggle_request_body))
-    smuggle_request_temp = smuggle_request.replace("__HOST__", host).replace("__PATH__", path).replace("__CACHE_BUSTER__", path).replace("__METHOD__", request_method).replace("__MOD_CL__", modified_cl)
+    smuggle_request_temp = smuggle_request.replace("__HOST__", host).replace("__PATH__", path).replace("__CACHE_BUSTER__", cache_buster).replace("__METHOD__", request_method).replace("__MOD_CL__", modified_cl)
     smuggle_request_temp = smuggle_request_temp.replace("__CL__", smuggle_content_len) + smuggle_request_body
 
     
